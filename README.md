@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MongoDB Library Management System - README</title>
+ <title>MongoDB Library Management System - README</title>
     
  
     
 </head>
 <body>
     <h1>MongoDB Library Management System</h1>
-    <p><strong>Assigned Date:</strong> 21 October 2024, 12:00</p>
-    <p><strong>Submission Date:</strong> 23 October 2024, 12:00</p>
+  
     <p>This project demonstrates the use of MongoDB shell commands to create and manage a library system database. It includes collections for books, authors, and patrons with CRUD operations and advanced MongoDB queries.</p>
 
     <div class="section">
