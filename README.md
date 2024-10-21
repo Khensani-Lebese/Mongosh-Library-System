@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MongoDB Library Management System</title>
 </head>
+
 <body>
     <h1>MongoDB Library Management System</h1>
- 
-    <p>This project demonstrates the use of MongoDB shell commands to create and manage a library system database. It includes collections for books, authors, and patrons with CRUD operations and advanced MongoDB queries.</p>
+
+    <p>This project demonstrates the use of MongoDB shell commands to create and manage a library system database. 
+        It includes collections for books, authors, and patrons with CRUD operations and advanced MongoDB queries.
+    </p>
 
     <div class="section">
         <h2>1. Setup Instructions</h2>
@@ -26,6 +31,7 @@
 
     <div class="section">
         <h2>3. Insert Collections and Documents</h2>
+
         <h3>Books Collection</h3>
         <pre><code>
 db.Books.insertMany([
@@ -77,12 +83,16 @@ db.Patrons.insertMany([
 
     <div class="section">
         <h2>4. CRUD Operations</h2>
+
         <h3>READ</h3>
         <pre><code>db.Books.find()</code></pre>
+
         <h3>UPDATE</h3>
         <pre><code>db.Books.updateOne({ _id: 3 }, { $set: { available: false } })</code></pre>
+
         <h3>DELETE</h3>
         <pre><code>db.Books.deleteOne({ title: "Brave New World" })</code></pre>
     </div>
 </body>
+
 </html>
