@@ -1,38 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+# MongoDB Library Management System
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MongoDB Library Management System</title>
-</head>
+This project demonstrates the use of MongoDB shell commands to create and manage a library system database. 
+It includes collections for books, authors, and patrons with CRUD operations and advanced MongoDB queries.
 
-<body>
-    <h1>MongoDB Library Management System</h1>
 
-    <p>This project demonstrates the use of MongoDB shell commands to create and manage a library system database. 
-        It includes collections for books, authors, and patrons with CRUD operations and advanced MongoDB queries.
-    </p>
+# Setup Instructions
+Ensure MongoDB is installed on your system.
+Open a terminal and start MongoDB shell using the command:
+<pre><code>mongosh</code></pre>
 
-    <div class="section">
-        <h2>1. Setup Instructions</h2>
-        <ul>
-            <li>Ensure MongoDB is installed on your system.</li>
-            <li>Open a terminal and start MongoDB shell using the command:
-                <pre><code>mongosh</code></pre>
-            </li>
-        </ul>
-    </div>
+# Create Database
 
-    <div class="section">
-        <h2>2. Create Database</h2>
-        <pre><code>use LibraryDB</code></pre>
-    </div>
+<pre><code>use LibraryDB</code></pre>
+    
+# Insert Collections and Documents
+Books Collection
 
-    <div class="section">
-        <h2>3. Insert Collections and Documents</h2>
-
-        <h3>Books Collection</h3>
         <pre><code>
 db.Books.insertMany([
   { _id: 1, title: "1984", author_id: 1, genres: ["Dystopian", "Political Fiction"], published_year: 1949, available: true },
@@ -48,7 +31,7 @@ db.Books.insertMany([
 ])
         </code></pre>
 
-        <h3>Authors Collection</h3>
+# Authors Collection
         <pre><code>
 db.Authors.insertMany([
   { _id: 1, name: "George Orwell", nationality: "British", birth_year: 1903, death_year: 1950 },
@@ -79,20 +62,14 @@ db.Patrons.insertMany([
   { _id: 10, name: "Jack Anderson", email: "jack@example.com", borrowed_books: [7, 8] }
 ])
         </code></pre>
-    </div>
+ # CRUD Operations
+READ
+<pre><code>db.Books.find()</code></pre>
 
-    <div class="section">
-        <h2>4. CRUD Operations</h2>
+# UPDATE
 
-        <h3>READ</h3>
-        <pre><code>db.Books.find()</code></pre>
+<pre><code>db.Books.updateOne({ _id: 3 }, { $set: { available: false } })</code></pre>
 
-        <h3>UPDATE</h3>
-        <pre><code>db.Books.updateOne({ _id: 3 }, { $set: { available: false } })</code></pre>
-
-        <h3>DELETE</h3>
+# DELETE
         <pre><code>db.Books.deleteOne({ title: "Brave New World" })</code></pre>
-    </div>
-</body>
-
-</html>
+ 
